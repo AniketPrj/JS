@@ -7,13 +7,14 @@ const Home = async function ({ searchParams }) {
   const url = `https://api.themoviedb.org/3${
     genre === "fetchTopRated" ? `/movie/top_rated` : `/trending/all/week`
   }?api_key=${API_KEY}&language=en-US&page=1`;
-  const res = await fetch(url);
+
+  const res = await fetch(url, {next:{revalidate:100}});
   const data = await res.json();
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
   const results = data.results;
-  console.log(results);
+  console.log(results[0]);
 
   return <div>
     <Results  results={results}/>
