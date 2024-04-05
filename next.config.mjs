@@ -3,25 +3,4 @@ const nextConfig = {};
 
 export default nextConfig;
 
-module.exports = {
-  async rewrites() {
-    return [
-      {
-        source: '/about',
-        destination: '/',
-      },
-    ]
-  },
-}
-
-module.exports = {
-  async redirects() {
-    return [
-      {
-        source: '/about',
-        destination: '/',
-        permanent: true,
-      },
-    ]
-  },
-}
+// chnge in the commit "3rd commit are deleted"
