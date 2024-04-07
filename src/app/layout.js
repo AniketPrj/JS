@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Providers from "./Providers";
 import Navbar from "@/components/Navbar";
 import SearchBox from "@/components/SearchBox";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
         <Providers>
           <Header />
           <Navbar />
-          <SearchBox />
+          <Suspense>
+            <SearchBox />
+          </Suspense>
           {children}
         </Providers>
       </body>

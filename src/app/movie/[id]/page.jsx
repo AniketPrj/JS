@@ -23,13 +23,20 @@ const MoviePage = async ({ params }) => {
           width={500}
           height={300}
           className="rounded-lg"
-          style={{maxWidth: '100%', height:'100%'}}
+          style={{ maxWidth: "100%", height: "100%" }}
         ></Image>
         <div className="p-2">
-          <h2 className="text-lg mb-3 font-bold">
+          <h2 className="text-6xl mb-3 font-bold">
             {movie.title || movie.name}
           </h2>
-          <p className="text-lg mb-3">{movie.overview}</p>
+          <p className="text-lg mb-3">
+            <span className="font-semibold mr-1">Original title:</span>
+            {movie.original_title}
+          </p>
+          <p className="text-lg mb-3">
+            <span className="font-semibold mr-1">Overview:</span>
+            {movie.overview}
+          </p>
 
           <p className="mb-3">
             <span className="font-semibold mr-1">Date Released:</span>

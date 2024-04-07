@@ -13,7 +13,7 @@ const Card = ({ result }) => {
           }`}
           width={500}
           height={300}
-          // style={{max-witdh: 500;}          }
+          alt={`Image: ${result.title || result.name}`}
           className="sm:rounded-t-lg group-hover:opacity-75 transition-opacity duration-300"
         ></Image>
         <div className="p-2">
