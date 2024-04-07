@@ -26,7 +26,7 @@ const MoviePage = async ({ params }) => {
           style={{ maxWidth: "100%", height: "100%" }}
         ></Image>
         <div className="p-2">
-          <h2 className="text-6xl mb-3 font-bold">
+          <h2 className="text-2xl mb-3 font-bold">
             {movie.title || movie.name}
           </h2>
           <p className="text-lg mb-3">
@@ -42,8 +42,10 @@ const MoviePage = async ({ params }) => {
             <span className="font-semibold mr-1">Date Released:</span>
             {movie.release_date || movie.first_air_date}
           </p>
-          <p className="mb-3">
-            <span className="font-semibold mr-1">Rating:</span>
+          <p className="mb-3 flex items-center">
+            <span className="font-semibold mr-1">Rating: </span>
+            <MdWidthFull className="h-5 mr-1 ml-3" />
+
             {movie.vote_count}
           </p>
         </div>
