@@ -11,7 +11,7 @@ const SearchPage = async function ({ params }) {
     .trim()
     .replace(/spinner.svg|\s+/g, "%20");
   console.log({ params });
-  const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchTerm}&language=en-US&page=1&include_adult=false`;
+  const url = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&query=${searchTerm}&language=en-US&page=1&include_adult=false`;
   // console.log(url);
 
   const res = await fetch(url);
