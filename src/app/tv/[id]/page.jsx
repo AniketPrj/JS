@@ -6,7 +6,7 @@ const API_KEY = process.env.API_KEY;
 
 const MoviePage = async ({ params }) => {
   const movieId = params.id;
-  const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`;
+  const url = `https://api.themoviedb.org/3/tv/${movieId}?api_key=${API_KEY}`;
   // const movieTitle = params.title;
   // const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${movieTitle}`;
   const res = await fetch(url);

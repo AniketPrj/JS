@@ -6,7 +6,7 @@ import { FiThumbsUp } from "react-icons/fi";
 const Card = ({ result }) => {
   return (
     <div className="group cursor-pointer rounded-lg hover:shadow-slate-400 shadow-md  border border-slate-400 m-2 transition-shadow duration-200">
-      <Link href={`/movie/${result.id}`}>
+      <Link href={`/${result.media_type}/${result.id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/original/${
             result.backdrop_path || result.poster_path
